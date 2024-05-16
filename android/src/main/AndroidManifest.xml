@@ -14,4 +14,6 @@
   <uses-permission android:name="android.permission.BLUETOOTH" />
   <!-- For Android 12 and above devices, the following permission is also required. -->
   <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+  <!-- Fix for Flutter 3.x.x and required Service Permission from Play Console -->
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
 </manifest>
