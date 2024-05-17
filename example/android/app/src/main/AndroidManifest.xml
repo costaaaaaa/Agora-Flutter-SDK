@@ -1,7 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.agora.agora_rtc_ng_example">
 
-<!--     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> -->
+   <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+   <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" tools:node="remove" />
+   <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" tools:node="remove" />
 
    <application
         android:label="agora_rtc_ng_example"
@@ -34,10 +36,11 @@
             android:name="flutterEmbedding"
             android:value="2" />
 
-<!--        <service
+        <service
            android:name=".ExampleService"
            android:exported="false"
            android:foregroundServiceType="mediaPlayback|microphone"
-           android:stopWithTask="false" /> -->
+           tools:replace="android:foregroundServiceType"
+           android:stopWithTask="false" />
     </application>
 </manifest>
